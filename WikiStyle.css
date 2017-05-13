@@ -1,0 +1,86 @@
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    margin-top: 40px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.sidenav .bbn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 5px;
+    margin-left: 250px;
+}
+
+#close {
+    display: none;
+}
+
+#ex {
+    font-size: 20px;
+    color: #f1f1f1;
+}
+
+#display_title {
+    display: inline-block;
+    text-decoration: underline;
+    border: dashed #333333 2px;
+    color: #ffffff;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidenav {
+        width: 0;
+    }
+
+    #main {
+        margin-left: 0;
+    }
+
+    #close {
+        display: block;
+    }
+}
+
+@media (min-width: 600px) {
+    .sidenav {
+        width: 250px;
+    }
+}

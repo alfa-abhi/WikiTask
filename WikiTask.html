@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWikiViewer</title>
+    <link rel="stylesheet" href="WikiStyle.css">
+    <script src="WikiJS.js"></script>
+</head>
+<body style="background-color: #555555; margin: 0; padding: 0">
+<div style="width: 100%; text-align: center; background-color: #333333;margin: 0; padding: 0">
+    <h1 id="title" style="text-align: center;color: #ffffff;margin: 0; padding: 0">My Wiki</h1>
+</div>
+<br>
+<div id="mySidenav" class="sidenav">
+    <button id="close" class="bbn" onclick="closeNav()" style="float: right; font-size: 18px; margin-top: 10px;background-color: #008CBA;border-radius: 4px; color: white">X</button>
+    <br>
+    <div style="margin: 5px">
+        <input id="search_this" type="text" placeholder="Search" style="width: 220px"/>
+        <div style="display: inline-block">
+            <select id="lang" title="language_select" style="width: 100px; margin-top: 30px">
+                <option id="default" value="en">Language</option>
+                <option id="en" value="en">English</option>
+                <option id="ceb" value="ceb">Cebuano</option>
+                <option id="sv" value="sv">Swedish</option>
+                <option id="de" value="de">German</option>
+                <option id="nl" value="nl">Dutch</option>
+                <option id="hi" value="hi">Hindi</option>
+                <option id="fr" value="fr">French</option>
+                <option id="ru" value="ru">Russian</option>
+                <option id="it" value="it">Italian</option>
+                <option id="es" value="es">Spanish</option>
+            </select>
+            <button value="Fetch" style="margin-left: 5px; background-color: #008CBA; border-radius: 4px; color: white"
+                    onclick="init_request()">Fetch
+            </button>
+        </div>
+    </div>
+</div>
+<button onclick="openNav()" style="margin: 2px;font-size: 20px; background-color: #008CBA; border-radius: 4px; color: white">=</button>
+<div id="main">
+    <h2 id="display_title"></h2>
+    <p id="ex"></p>
+</div>
+</body>
+</html>
